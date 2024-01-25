@@ -1,5 +1,3 @@
-import { localStorage } from 'local-storage';
-
 function saveFormState() {
   const email = document.querySelector("input[name='email']").value;
   const message = document.querySelector("textarea[name='message']").value;

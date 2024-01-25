@@ -111,6 +111,6 @@ function createGallery() {
 
 createGallery();
 
-SimpleLightbox.init({
-  captionsFromAlt: true,
+var lightbox = new SimpleLightbox('.gallery a', {
+  /* options */
 });
