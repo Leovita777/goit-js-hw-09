@@ -82,21 +82,9 @@ function createGallery() {
     img.classList.add('gallery-image');
     img.src = image.preview;
     img.alt = image.description;
-
-    const details = document.createElement('div');
-    details.classList.add('gallery-image-details');
-
-    const title = document.createElement('h4');
-    title.textContent = image.title;
-
-    const description = document.createElement('p');
-    description.textContent = image.description;
-
-    details.appendChild(title);
-    details.appendChild(description);
+    img.dataset.source = image.original;
 
     a.appendChild(img);
-    a.appendChild(details);
     li.appendChild(a);
     return li;
   });
@@ -111,6 +99,7 @@ function createGallery() {
 
 createGallery();
 
-var lightbox = new SimpleLightbox('.gallery a', {
-  /* options */
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
 });
