@@ -82,7 +82,6 @@ function createGallery() {
     img.classList.add('gallery-image');
     img.src = image.preview;
     img.alt = image.description;
-    img.dataset.source = image.original;
 
     a.appendChild(img);
     li.appendChild(a);
